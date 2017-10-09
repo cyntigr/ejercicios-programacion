@@ -19,7 +19,6 @@ public class Ejercicio01 {
     linea = System.console().readLine();
     int segundoNumero;
     segundoNumero = Integer.parseInt( linea );
-
     int total;
     total = primerNumero * segundoNumero;
 
