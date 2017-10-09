@@ -13,12 +13,12 @@ public class Ejercicio01 {
     System.out.print("Por favor, introduce un número: ");
     linea = System.console().readLine();
     int primerNumero;
-    primerNumero = Integer.parseInt( linea );
+    primerNumero = Integer.parseInt(linea);
 
     System.out.print("introduce otro, por favor: ");
     linea = System.console().readLine();
     int segundoNumero;
-    segundoNumero = Integer.parseInt( linea );
+    segundoNumero = Integer.parseInt(linea);
     int total;
     total = primerNumero * segundoNumero;
 
