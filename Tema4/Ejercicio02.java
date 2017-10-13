@@ -31,6 +31,5 @@ public class Ejercicio02 {
     if ((hora>=21)||(hora<=5)) {
       System.out.println("Buenas noches");
     }
-    
   }
 }

@@ -9,8 +9,7 @@
 
 public class Ejercicio08 {
   public static void main(String[] args) {
-  
-    String numero;
+    
     
     System.out.println("Cálculo de salario ");
     System.out.print("Dias trabajados: ");
