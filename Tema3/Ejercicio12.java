@@ -23,9 +23,7 @@ public class Ejercicio12 {
     double notaMedia = Double.parseDouble(System.console().readLine());
     System.out.println("--------------------------");
     
-    double primerPorcentaje = primerExam * 0.4;
-    double mediaNota = notaMedia - primerPorcentaje;
-    double segundoExamen = mediaNota / 0.6;
+    double segundoExamen = (notaMedia - 0.4 * primerExam)/0.6;
     
     System.out.println("Necesitas sacar un " + segundoExamen);   
   }
