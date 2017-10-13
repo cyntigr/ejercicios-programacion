@@ -18,30 +18,33 @@ public class Ejercicio03 {
   System.out.print("Introduce el numero de día del 1 al 7: ");
     
     int dia = Integer.parseInt(x.nextLine()) ;
+    String nombreDia;
     
-    if (dia = 1) {
-      System.out.println("Es Lunes");
+    switch (dia) {
+      case 1:
+        nombreDia = "Lunes";
+        break;
+      case 2:
+        nombreDia = "Martes";
+        break;
+      case 3:
+        nombreDia = "Miércoles";
+        break;
+      case 4:
+        nombreDia = "Jueves";
+        break;
+      case 5:
+        nombreDia = "Viernes";
+        break;
+      case 6:
+        nombreDia = "Sábado";
+        break;
+      case 7:
+        nombreDia = "Domingo";
+        break;
+      default:
+        nombreDia = "Ese dia no es correcto, vuelve a intentarlo.";
     }
-    if (dia.equals(2)) {
-      System.out.println("Es Martes");
-    }
-    if (dia.equals(3)) {
-      System.out.println("Es Miércoles");
-    }
-    if (dia.equals(4)) {
-      System.out.println("Es Jueves");
-    }
-    if (dia.equals(5)) {
-      System.out.println("Es Viernes");
-    }
-    if (dia.equals(6)) {
-      System.out.println("Es Sábado");
-    }
-    if (dia.equals(7)) {
-      System.out.println("Es Domingo");
-    }
-    else { 
-      System.out.print("Lo siento ese día no es correcto. Vuelve a intentarlo");
-    }
+    System.out.print("Dia " + dia + ": " + nombreDia);
   }
 }
