@@ -24,15 +24,15 @@ public class Ejercicio09 {
     
     int c = Integer.parseInt(System.console().readLine());
     
-    double x3 =(double) b*b-4*a*c;
+    double x3 =(double) b*b - 4*a*c;
     
     if (x3 >= 0){
       
-    double x1 =(double) -b + Math.sqrt(b*b-4*a*c)/2*a;
-    double x2 =(double) -b - Math.sqrt(b*b-4*a*c)/2*a;
+    double x1 = ((double) -b + Math.sqrt(b*b - 4*a*c)) / 2*a;
+    double x2 = ((double) -b - Math.sqrt(b*b - 4*a*c)) / 2*a;
     
-    System.out.printf("Solución1: %.2f\n", x1);
-    System.out.printf("Solución2: %.2f\n", x2);
+    System.out.printf("Solución 1: %.2f\n", x1);
+    System.out.printf("Solución 2: %.2f\n", x2);
 
     }
     
