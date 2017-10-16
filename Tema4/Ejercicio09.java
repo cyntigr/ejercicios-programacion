@@ -27,17 +27,15 @@ public class Ejercicio09 {
     double x3 =(double) b*b - 4*a*c;
     
     if (x3 >= 0){
-      
-    double x1 = ((double) -b + Math.sqrt(b*b - 4*a*c)) / 2*a;
-    double x2 = ((double) -b - Math.sqrt(b*b - 4*a*c)) / 2*a;
+      double x1 = (double)((-b + Math.sqrt(x3)) / (2*a));
+      double x2 = (double)((-b - Math.sqrt(x3)) / (2*a));
     
-    System.out.printf("Solución 1: %.2f\n", x1);
-    System.out.printf("Solución 2: %.2f\n", x2);
-
+      System.out.printf("Solución 1: %.2f\n", x1);
+      System.out.printf("Solución 2: %.2f\n", x2);
     }
     
     if (x3 < 0){
-    System.out.printf("No tiene solución");
+      System.out.printf("No tiene solución");
     }
     
   }

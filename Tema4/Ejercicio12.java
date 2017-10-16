@@ -15,107 +15,98 @@ public class Ejercicio12 {
     System.out.println("Cuestionario sobre el tema verdadero o falso:");
     System.out.println("---------------------------------------------");
     
-    int resultado;
+    int resultado = 0;
+    int total;
     
     System.out.print("En base de datos se dan los tipos de ficheros: ");
-    int pregunta1 = Integer.parseInt(System.console().readLine());
+    String pregunta1 = System.console().readLine();
     
     if (pregunta1.equals("verdadero")) {
-    int p1 = resultado + 1;
-    
+      total = 1;
     } else {
-    int p1 = resultado + 0;
-      }
+      total = 0;
+    }
     
     System.out.print("En entornos de desarrollo damos html: ");
-    int pregunta2 = Integer.parseInt(System.console().readLine());
+    String pregunta2 = System.console().readLine();
     
-    if (pregunta2.equals ("verdadero")) {
-    int p2 = p1 + 1;
-    
+    if (pregunta2.equals ("falso")) {
+      total = total + 1;
     } else {
-    int p2 = p1 + 0;
-      }
+      total = total + 0;
+    }
     
     System.out.print("En sistemas nos enseñan a programar: ");
-    int pregunta3 = Integer.parseInt(System.console().readLine());
+    String pregunta3 = System.console().readLine();
     
-    if (pregunta3.equals ("verdadero")) {
-    int p3 = p2 + 1;
-    
+    if (pregunta3.equals ("falso")) {
+      total = total + 1;
     } else {
-    int p3 = p2 + 0;
-      }
+      total = total + 0;
+    }
       
     System.out.print("La base de datos es una estructura de ficheros: ");
-    int pregunta4 = Integer.parseInt(System.console().readLine());
+    String pregunta4 = System.console().readLine();
     
-    if (pregunta4.equals ("verdadero")) {
-    int p4 = p3 + 1;
-    
+    if (pregunta4.equals ("falso")) {
+      total = total + 1;
     } else {
-    int p4 = p3 + 0;
-      }
+      total = total + 0;
+    }
       
     System.out.print("En lenguajes de marca aprendemos css3: ");
-    int pregunta5 = Integer.parseInt(System.console().readLine());
+    String pregunta5 = System.console().readLine();
     
     if (pregunta5.equals ("verdadero")) {
-    int p5 = p4 + 1;
-    
+      total = total + 1;
     } else {
-    int p5 = p4 + 0;
-      }
+      total = total + 0;
+    }
       
     System.out.print("Cada asignatura tiene su temario en moodle: ");
-    int pregunta6 = Integer.parseInt(System.console().readLine());
+    String pregunta6 = System.console().readLine();
     
-    if (pregunta6.equals ("verdadero")) {
-    int p6 = p5 + 1;
-    
+    if (pregunta6.equals ("falso")) {
+      total = total + 1;
     } else {
-    int p6 = p5 + 0;
-      }
+      total = total + 0;
+    }
       
     System.out.print("En fol damos riesgos laborales: ");
-    int pregunta7 = Integer.parseInt(System.console().readLine());
+    String pregunta7 = System.console().readLine();
     
     if (pregunta7.equals ("verdadero")) {
-    int p7 = p6 + 1;
-    
+      total = total + 1;
     } else {
-    int p7 = p6 + 0;
-      }
+      total = total + 0;
+    }
       
     System.out.print("El github sirve para subir trabajos al repositorio: ");
-    int pregunta8 = Integer.parseInt(System.console().readLine());
+    String pregunta8 = System.console().readLine();
     
     if (pregunta8.equals ("verdadero")) {
-    int p8 = p7 + 1;
-    
+      total = total + 1;
     } else {
-    int p8 = p7 + 0;
-      }
+      total = total + 0;
+    }
       
     System.out.print("Los viernes salimos a las 14:15h: ");
-    int pregunta9 = Integer.parseInt(System.console().readLine());
+    String pregunta9 = System.console().readLine();
     
     if (pregunta9.equals ("verdadero")) {
-    int p9 = p8 + 1;
-    
+      total = total + 1;
     } else {
-    int p9 = p8 + 0;
-      }
+      total = total + 0;
+    }
       
     System.out.print("Las clases empiezan a las 08:15h: ");
-    int pregunta10 = Integer.parseInt(System.console().readLine());
+    String pregunta10 = System.console().readLine();
     
     if (pregunta10.equals ("verdadero")) {
-    int p10 = p9 + 1;
-    
+      total = total + 1;
     } else {
-    int p10 = p9 + 0;
+      total = total + 0;
       }
-    System.out.print("Tienes una puntuación de:" + p10 + " puntos.");
+    System.out.print("Tienes una puntuación de:" + total + " puntos.");
   }
 }
