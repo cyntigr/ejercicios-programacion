@@ -13,13 +13,13 @@ import java.util.Scanner;
 public class Ejercicio01 {
   public static void main(String[] args) {
   
-  Scanner dia = new Scanner(System.in);
+    Scanner dia = new Scanner(System.in);
   
-  System.out.print("Introduce día de la semana : ");
+    System.out.print("Introduce día de la semana : ");
   
     String diaSemana = dia.nextLine().toLowerCase();
     
-  System.out.print("Este día tenemos:");
+    System.out.print("Este día tenemos: ");
   
     switch (diaSemana) {
     
@@ -30,7 +30,8 @@ public class Ejercicio01 {
       case "martes":
         System.out.println("Sistemas Lenguaje M. Programación");
         break;
-      
+      case "miercoles":
+      //continua en la siguiente línea
       case "miércoles":
         System.out.println("Programación BBDD");
         break;

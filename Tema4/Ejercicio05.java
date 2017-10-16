@@ -20,5 +20,6 @@ public class Ejercicio05 {
     
     double x = (double)-b/a;
     System.out.printf("Solución: %.2f", x);
+    
   }
 }

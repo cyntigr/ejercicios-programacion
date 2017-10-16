@@ -17,6 +17,6 @@ public class Ejercicio06 {
     double g = 9.81;
     
     double t = (double)Math.sqrt(2*h/g);
-    System.out.printf("Solución: %.2f", t);
+    System.out.printf("Solución: %.2fs", t);
   }
 }
