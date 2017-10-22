@@ -16,7 +16,8 @@ public class Ejercicio17 {
     System.out.println("--------------------------------------------");
     
     System.out.println("Introduce el numero: ");
-    int num = Integer.parseInt(x.nextLine());
+    int num = x.nextInt();
+    
     System.out.print("El ultimo numero es: " + (num % 10));
     
   }

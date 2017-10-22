@@ -19,7 +19,7 @@ public class Ejercicio15 {
   
     Scanner x = new Scanner(System.in);
     System.out.println("Pirámide ");
-    System.out.println("-------------------------");
+    System.out.println("---------");
     System.out.println("Introduce el caracter: ");
     
     String p = x.nextLine();
