@@ -14,8 +14,6 @@ public class Ejercicio06{
     do {
       contar -= 20;
       System.out.print(contar + "  ");
-    }
-    
-    while (contar >= 180);
+    } while (contar >= 180);
   }
 }

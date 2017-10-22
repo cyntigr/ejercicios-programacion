@@ -21,7 +21,6 @@ public class Ejercicio03{
       } else {
         System.out.print("Error del programa");
         }
-    }
-    while (mult <= 95);
+    } while (mult <= 95);
   }
 }
