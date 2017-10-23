@@ -18,16 +18,20 @@ public class Ejercicio17{
     System.out.println("Suma de los 100 números siguientes");
     System.out.println("----------------------------------");
     
-    System.out.println("Introduce el número: ");
-    
-    Scanner x = new Scanner(System.in);
-    
-    int num = x.nextInt();
-    
-    int total = 0;
-    
-    for (int i = num ; i == num +  100 ; i++){
-    total += i;
+    do {
+      System.out.println("Introduce el número: ");
+      
+      Scanner x = new Scanner(System.in);
+      
+      int num = x.nextInt();
+      if (num < 0) {
+        System.out.println("Lo siento no es positivo");
+      } else {
+        int total = 0;
+          for (int i = num ; i == num +  100 ; i++){
+          total += i;
+          }
+        }
     }
     System.out.print("RESULTADO SUMA: " + total);
   }

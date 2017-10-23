@@ -7,13 +7,9 @@ public class Ejercicio01{
   public static void main(String[] args) {
     System.out.println("Multiplos de 5: ");
     System.out.println("----------------");
+    
     for (int mult = 0; mult <= 100; mult += 5) {
-      
-      if ((mult % 5) == 0) { 
-      System.out.print(mult + "  ");
-      } else {
-        System.out.print("Error del programa");
-        }
+        System.out.print("  " + mult);
     }
   }
 }

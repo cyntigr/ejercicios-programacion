@@ -15,12 +15,8 @@ public class Ejercicio03{
     int mult = 0;
     
     do {
-      mult += 5;
-      if ((mult % 5) == 0) { 
       System.out.print(mult + "  ");
-      } else {
-        System.out.print("Error del programa");
-        }
-    } while (mult <= 95);
+      mult += 5;
+    } while (mult <= 100);
   }
 }

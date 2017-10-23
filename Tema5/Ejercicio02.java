@@ -14,14 +14,10 @@ public class Ejercicio02{
     
     int mult = 0;
     
-    while (mult <= 95) {
+    while (mult <= 100) {
       
-      mult += 5;
-      if ((mult % 5) == 0) { 
       System.out.print(mult + "  ");
-      } else {
-        System.out.print("Error del programa");
-        }
+      mult += 5;
     }
   }
 }
