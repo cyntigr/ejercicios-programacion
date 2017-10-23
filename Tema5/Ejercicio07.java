@@ -25,9 +25,9 @@ public class Ejercicio07{
       clave = x.nextInt();
       intentos++;
       if (clave == 8545) {
-      System.out.println("La caja fuerte se ha abierto satisfactoriamente");
+      System.out.println("La caja fuerte se ha abierto satisfactoriamente.");
       } else {
-          System.out.println("Lo siento, esa no es la combinación");
+          System.out.println("Lo siento, esa no es la combinación.");
         }
     } while ((clave != 8545) && (intentos < 4));
   }

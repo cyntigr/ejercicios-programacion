@@ -13,23 +13,22 @@ import java.util.Scanner;
 public class Ejercicio12{
   public static void main(String[] args) {
     
-    System.out.println("Serie de Fibonacci");
+    System.out.println("Serie de Fibonacci ");
     System.out.println("------------------");
+    System.out.println("Introduce un número para calcular la serie:");
     Scanner x = new Scanner(System.in);
-    int n = x.nextInt();
-    int ultimo = 1;
-    int penultimo = 0;
-    int serie = 0;
+    long n = x.nextLong();
+    long ultimo = 1;
+    long penultimo = 0;
+    long serie = 0;
     
     System.out.print(penultimo + (" ") + ultimo);
-    for (int i = 1; i <= n - 2; i++) {
+    for (long i = 1; i <= n - 2; i++) {
       
       serie = ultimo + penultimo;
       penultimo = ultimo;
       ultimo = serie;
-      
       System.out.print((" ") + serie);
-      
     }
     
   }

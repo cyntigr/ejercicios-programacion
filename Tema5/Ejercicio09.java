@@ -9,17 +9,21 @@
  
 public class Ejercicio09{
   public static void main(String[] args) {
+    
     System.out.println("Cuantos digitos tiene un número");
     System.out.println("-------------------------------");
     Scanner x = new Scanner(System.in);
     
     int num = x.nextInt();
-    int i = 1;
+    int incremento = 1;
     
+    if (num < 0){
+      num = num * (-1);
+    }
     while (num > 9) {
       num = num / 10;
-      i++;
+      incremento++;
     }
-    System.out.print("El número introducido tiene " + i + " cifras.");
+    System.out.print("El número introducido tiene " + incremento + " cifras.");
   }
 }

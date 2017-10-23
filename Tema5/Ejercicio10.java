@@ -16,7 +16,7 @@ public class Ejercicio10{
     System.out.println("-------------------");
     
     int num = 0;
-    int i = 0;
+    int division = 0;
     int suma = 0;
     
     while (num >= 0) {
@@ -24,8 +24,8 @@ public class Ejercicio10{
       num = x.nextInt();
       if (num >= 0){
       suma = num + suma;
-      i++;}
+      division++;}
     }
-    System.out.printf("La media es: %.2f",(double)suma/i);
+    System.out.printf("La media es: %.2f",(double)suma/division);
   }
 }

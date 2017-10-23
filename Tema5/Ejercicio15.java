@@ -23,14 +23,17 @@ public class Ejercicio15{
     Scanner x = new Scanner(System.in);
     
     int ba = x.nextInt();
-    int exponente = x.nextInt();
-    int total = 1;
+    int exponenteMaximo = x.nextInt();
     
-    for (int contar = 1; contar <= exponente; contar++){
+    for (int contar = 1; contar <= exponenteMaximo; contar++){
       
-      System.out.println(ba + " " + contar);
-      total = total * ba;
+      //Calcula la potencia ba^exponente
+      int total = 1;
       
+      for (int i = 1; i <= contar; i++){
+        total = total * ba;
+      }
+      System.out.println(ba + " ^ " + contar + "=" + total);
     }
   }
 }
