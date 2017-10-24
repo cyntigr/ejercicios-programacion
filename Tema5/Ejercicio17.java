@@ -17,22 +17,22 @@ public class Ejercicio17{
    
     System.out.println("Suma de los 100 números siguientes");
     System.out.println("----------------------------------");
+    Scanner x = new Scanner(System.in);
     
-    do {
-      System.out.println("Introduce el número: ");
-      
-      Scanner x = new Scanner(System.in);
-      
-      int num = x.nextInt();
-      if (num < 0) {
-        System.out.println("Lo siento no es positivo");
-      } else {
-        int total = 0;
-          for (int i = num ; i == num +  100 ; i++){
-          total += i;
-          }
-        }
+    System.out.print("Introduce un número entero: ");
+    int numeroEntero = x.nextInt();
+    
+    if (numeroEntero >= 0){
+      int i = 1;
+      int suma = 0;
+      do {
+        i++;
+        suma = suma + numeroEntero;
+        numeroEntero++;
+      } while (i <= 100);
+      System.out.print("Resultado: " + suma);
+    } else {
+      System.out.println("EL número introducido no es correcto");
     }
-    System.out.print("RESULTADO SUMA: " + total);
   }
 }

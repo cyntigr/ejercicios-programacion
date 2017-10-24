@@ -30,7 +30,7 @@ public class Ejercicio16{
     }
     if ((divi == 0) && (num != 2)) {
         System.out.print("No es número primo");
-      } else {
+    } else {
         System.out.print("Es numero primo");
         }
   }
