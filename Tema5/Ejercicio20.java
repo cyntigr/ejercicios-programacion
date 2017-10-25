@@ -22,18 +22,33 @@ public class Ejercicio20{
     
     System.out.print("Introduce un caracter: ");
     String caracter = x.next();
+    int espacioInterno = 0;
     
     //Pinta la altura de la piramide
-    for (int i = 0; i <= altura - 1; i++){
-      //Pinta espacios
+    
+    for (int i = 0; i <= altura - 2; i++){
+      
+      //Pinta espacios externos
       for (int k = 1; k <= altura - i; k++){
         System.out.print(" ");
       }
       //Pinta el caracter
-      for (int j = 1; j <= 2*i+1; j++){
+      System.out.print(caracter);
+      
+      for (int u = 1; u < espacioInterno; u++) {
+        System.out.print(" ");
+      }
+      
+      if ((altura > 1) && (i > 0)) {
         System.out.print(caracter);
       }
       System.out.println("");
+      espacioInterno += 2;
+    }
+    //Base
+    System.out.print(" ");
+    for (int h = 1; h < altura*2; h++) {
+      System.out.print(caracter);
     }
   }
 }
