@@ -1,9 +1,8 @@
 /**
 *
-*Realiza un programa que pinte la letra U por pantalla hecha con asteriscos. El
-*programa pedirá la altura. Fíjate que el programa inserta un espacio y pinta
-*dos asteriscos menos en la base para simular la curvatura de las esquinas
-*inferiores.
+*Realiza un programa que pinte una X hecha de asteriscos. El programa debe
+*pedir la altura. Se debe comprobar que la altura sea un número impar mayor
+*o igual a 3, en caso contrario se debe mostrar un mensaje de error.
 *
 * 
 * 
@@ -12,13 +11,13 @@
 
 import java.util.Scanner;
 
-public class Ejercicio33{
+public class Ejercicio35{
   public static void main(String[] args) {
     
-    System.out.println("Pinta una U por pantalla");
+    System.out.println("Pinta una X por pantalla");
     System.out.println("------------------------");
     
-    System.out.print("Introduce la altura de la U: ");
+    System.out.print("Introduce la altura de la X: ");
     
     Scanner x = new Scanner(System.in);
     int altura = x.nextInt();

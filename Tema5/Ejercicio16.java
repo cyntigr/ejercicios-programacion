@@ -13,8 +13,7 @@ import java.util.Scanner;
 public class Ejercicio16{
   public static void main(String[] args) {
     
-   
-   
+    
     System.out.println("Comprueba si es número primo ");
     System.out.println("-----------------------------");
     
@@ -25,10 +24,12 @@ public class Ejercicio16{
     int num = x.nextInt();
     int divi = 0;
     
-    for (int i = 2; i <= num; i++){
-      divi = num % i;
+    for (int i = 2; i < num; i++){
+      if (num % i == 0) {
+        divi = 1;
+      }
     }
-    if ((divi == 0) && (num != 2)) {
+    if (divi == 1) {
         System.out.print("No es número primo");
     } else {
         System.out.print("Es numero primo");
