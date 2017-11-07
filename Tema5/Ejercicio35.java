@@ -21,20 +21,68 @@ public class Ejercicio35{
     
     Scanner x = new Scanner(System.in);
     int altura = x.nextInt();
+    int espaciosDelante = 0;
+    int espaciosDetras = 0;
+    int alturaCentral = 0;
+    int espaciosDelanteDos = 0;
+    int espaciosDetrasDos = 0;
+    int alturaCentralDos = 0;
     
-    //altura U
-    for(int i=0; i < altura-1; i++){
-      System.out.print("*");
-      for(int k=0; k < altura -2; k++){
-      System.out.print(" ");
+    if((altura >= 3) && ((altura % 2) != 0)){
+    
+      for(int j=0 ; j <= ((altura-2)/2); j++){
+        //primer triangulo x
+        for(int i= 0; i <= espaciosDelante;i++){
+          System.out.print(" ");
+        }
+        //PALO 2
+        System.out.print("*");
+        
+        //ESPACIOS DETRAS
+        for(int k = altura - 2; k > espaciosDetras;k--){
+          System.out.print(" ");
+        }
+        //PALO 3
+        System.out.print("*");
+        
+        //IMPORTANTE PONER QUE SE AUMENTE AL FINAL DEL BUCLE
+        espaciosDelante++;
+        espaciosDetras+=2;
+        alturaCentral++;
+        System.out.println("");
+      }
+      //centro de x
+      for(int p=0 ; p <= ((altura-1)/2); p++){
+        System.out.print(" ");
       }
       System.out.println("*");
-    }
+      
+      for(int j=0 ; j <= ((altura-2)/2); j++){
+        //ESPACIOS DETRAS 
+        for(int k = ((altura-1)/2); k > espaciosDetrasDos;k--){
+          System.out.print(" ");
+        }
+        //PALO 3
+        System.out.print("*");
+        
+        //segundo triangulo x
+        for(int i= 0; i <= espaciosDelanteDos;i++){
+          System.out.print(" ");
+        }
+        //PALO 2
+        System.out.print("*");
+        
+        
+        
+        //IMPORTANTE PONER QUE SE AUMENTE AL FINAL DEL BUCLE
+        espaciosDelanteDos+=2;
+        espaciosDetrasDos++;
+        alturaCentralDos++;
+        System.out.println("");
+      }
     
-    //BASE
-    System.out.print(" ");
-    for(int j= 1; j <= altura-2 ; j++){
-      System.out.print("*");
-    }
+    } else {
+        System.out.print("Lo siento tiene que ser un número impar para poder hacer la X.");
+      }
   }
 }

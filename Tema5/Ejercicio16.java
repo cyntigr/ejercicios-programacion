@@ -33,6 +33,6 @@ public class Ejercicio16{
         System.out.print("No es número primo");
     } else {
         System.out.print("Es numero primo");
-        }
+      }
   }
 }
