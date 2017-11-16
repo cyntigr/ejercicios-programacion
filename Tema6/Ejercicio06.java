@@ -42,6 +42,7 @@ public class Ejercicio06{
       System.out.println(" ");
       cuenta++;
     } while((cuenta < 5) && (numero != oportunidad));
+    System.out.print("El número introducido es el " + numero);
     
   }
 }

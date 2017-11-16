@@ -16,7 +16,7 @@ public class Ejercicio07{
   public static void main(String[] args) {
     
     System.out.println("Resultado de 3 columnas de la quiniela");
-    System.out.println("--------------------------------------------------------------");
+    System.out.println("--------------------------------------");
     int cuenta = 0;
     int numero = 0;
     System.out.println("Columna 1  Columna 2 Columna 3");
