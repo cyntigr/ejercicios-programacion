@@ -15,13 +15,18 @@ public class Ejercicio17 {
 
   public static void main(String[] args) {
     Scanner x = new Scanner(System.in);
+    System.out.print("Introduce un número en binario : ");
     int binario = x.nextInt();
     int resultado = 0;
     int vuelta;
     int[] exponentes = new int[Ejercicios1a14.digitos(binario)];
     
     for (int i = 0; i < Ejercicios1a14.digitos(binario); i++) {
-      exponentes[i] = Ejercicios1a14.potencia(2, i);
+      if(i == 0){
+        exponentes[i] = 1;
+      } else{
+          exponentes[i] = Ejercicios1a14.potencia(2, i);
+      }
     }
     int[] exponentesVolteado = Ejercicios20a28.volteaArray(exponentes);
     for (int i = 0; i < Ejercicios1a14.digitos(binario); i++) {
