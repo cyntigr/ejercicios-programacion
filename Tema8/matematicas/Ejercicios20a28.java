@@ -188,16 +188,54 @@ public class Ejercicios20a28 {
   }
 
   public static int[] rotaDerechaArrayInt(int x[], int n) {
+    int y[] = duplicaArray(x);
+
+    for (int i = 0; i < n; i++) {
+      y = rotaDerechaArrayIntUna(y);
+    }
+
+    return y;
+  }
+
+  public static int[] rotaDerechaArrayIntUna(int x[]) {
+
     int y[] = new int[x.length];
-    int tamanoArray = x.length - 1;
-    int j = 1;
-    while (n-- > 0) {
-      y[0] = x[tamanoArray];
-      for (int i = 0; i < tamanoArray - 1; i++) {
-        y[j] = x[i];
-        j++;
-      }
+    int tamanoArray = x.length;
+    y[0] = x[tamanoArray - 1];
+    for (int i = 0; i <= tamanoArray - 2; i++) {
+      y[i + 1] = x[i];
+    }
+
+    return y;
+  }
+
+  public static int[] duplicaArray(int x[]) {
+    int y[] = new int[x.length];
+
+    for (int i = 0; i < x.length; i++) {
+      y[i] = x[i];
     }
     return y;
   }
+
+  public static int[] rotaIzquierdaArrayIntUna(int x[]) {
+    int y[] = new int[x.length];
+    int tamanoArray = x.length;
+
+    y[tamanoArray - 1] = x[0];
+    for (int i = 0; i <= tamanoArray - 2; i++) {
+      y[i] = x[i + 1];
+    }
+    return y;
+  }
+
+  public static int[] rotaIzquierdaArrayInt(int x[], int n) {
+    int y[] = duplicaArray(x);
+
+    for (int i = 0; i < n; i++) {
+      y = rotaIzquierdaArrayIntUna(y);
+    }
+    return y;
+  }
+
 }

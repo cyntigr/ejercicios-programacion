@@ -23,8 +23,10 @@ public class Tema8Ejercicios20a28 {
       System.out.println("2 " + Ejercicios20a28.maximoArrayInt(arrayMaximo));
       System.out.println("3 " + Ejercicios20a28.minimoArrayInt(array));
       Ejercicios20a28.volteaArray(Ejercicios20a28.generaArrayInt(8, 15, 30));
+      Ejercicios20a28.muestraArray(array);
       Ejercicios20a28.muestraArray(Ejercicios20a28.rotaDerechaArrayInt(array, 3));
-      Ejercicios20a28.rotaDerechaArrayInt(array, 2);
+      Ejercicios20a28.muestraArray(Ejercicios20a28.rotaIzquierdaArrayInt(array, 3));
+      
     }
 
 }
