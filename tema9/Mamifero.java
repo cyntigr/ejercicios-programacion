@@ -23,5 +23,13 @@ public class Mamifero extends Animal {
   public int getNumeroMamas() {
     return this.numeroMamas;
   }
+
+  public void setTiempoGestacion(int tiempoGestacion) {
+    this.tiempoGestacion = tiempoGestacion;
+  }
+
+  public void setNumeroMamas(int numeroMamas) {
+    this.numeroMamas = numeroMamas;
+  }
   
 }

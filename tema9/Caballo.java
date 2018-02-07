@@ -9,7 +9,12 @@ package tema9;
  */
 public class Caballo {
   //Atributos
-  private String nombre, color, uso, raza, sexo;
+  private String nombre;
+  private String color;
+  private String uso;
+  private String raza;
+  private String sexo;
+                          
   private int edad;
 
   //Construcctor 
@@ -25,7 +30,31 @@ public class Caballo {
     this.uso = u;
   }
   
+  public void setNombre(String nombre) {
+    this.nombre = nombre;
+  }
+
+  public void setColor(String color) {
+    this.color = color;
+  }
+
+  public void setUso(String uso) {
+    this.uso = uso;
+  }
+
+  public void setRaza(String raza) {
+    this.raza = raza;
+  }
+
+  public void setSexo(String sexo) {
+    this.sexo = sexo;
+  }
+
   //Métodos
+  public void setEdad(int edad) {  
+    this.edad = edad;
+  }
+
   public String getNombre() {
     return this.nombre;
   }

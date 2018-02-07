@@ -42,8 +42,25 @@ public class Animal {
     this.edad = e;
   }
 
+  public void setColor(String color) {
+    this.color = color;
+  }
+
+  public void setNombre(String nombre) {
+    this.nombre = nombre;
+  }
+
+  public void setSexo(String sexo) {
+    this.sexo = sexo;
+  }
+
   public void come(String comida) {
     System.out.println("Estoy comiendo");
+  }
+
+  @Override
+  public String toString() {
+    return "Animal{" + "color=" + color + ", nombre=" + nombre + ", sexo=" + sexo + ", edad=" + edad + '}';
   }
   
 }
