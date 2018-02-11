@@ -11,7 +11,7 @@ public abstract class Vehiculo {
   private int ruedas = 0;
   private static int kilometrosTotales = 0;
   private int kilometrosRecorridos = 0;
-  
+
   public Vehiculo(String color, String tipo, int ruedas) {
     this.color = color;
     this.tipo = tipo;
@@ -25,7 +25,6 @@ public abstract class Vehiculo {
   public int getKilometrosRecorridos() {
     return kilometrosRecorridos;
   }
-  
 
   public String getColor() {
     return color;
@@ -50,15 +49,15 @@ public abstract class Vehiculo {
   public void setRuedas(int ruedas) {
     this.ruedas = ruedas;
   }
-   
+
   @Override
   public String toString() {
     return "Vehiculo{" + "color=" + color + ", tipo=" + tipo + ", ruedas=" + ruedas + '}';
   }
-  
-  public void anda(int km){
+
+  public void anda(int km) {
     Vehiculo.kilometrosTotales += km;
     this.kilometrosRecorridos += km;
   }
-  
+
 }

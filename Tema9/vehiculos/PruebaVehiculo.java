@@ -36,7 +36,7 @@ public class PruebaVehiculo {
         case 1:
           System.out.println("Cuantos kilometros quieres andar: ");
           kilometros = x.nextInt();
-            uno.anda(kilometros);
+          uno.anda(kilometros);
           break;
         case 2:
           uno.caballito();
@@ -44,7 +44,7 @@ public class PruebaVehiculo {
         case 3:
           System.out.println("Cuantos kilometros quieres andar: ");
           kilometros = x.nextInt();
-            dos.anda(kilometros);
+          dos.anda(kilometros);
           break;
         case 4:
           dos.quemaRueda();
