@@ -1,4 +1,4 @@
-package tema9;
+package animales;
 
 /**
  * Implementa la clase Caballo vista en un ejercicio anterior. Pruébala creando 

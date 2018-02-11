@@ -1,4 +1,6 @@
-package tema9;
+package animales;
+
+import animales.Animal;
 
 /**
  *
