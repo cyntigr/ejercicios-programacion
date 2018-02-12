@@ -5,6 +5,8 @@ package tema8ejercicios.matematicas;
  * @author cyntia
  */
 import tema8ejercicios.matematicas.Ejercicios20a28;
+import tema8ejercicios.matematicas.Ejercicios1a14;
+
 public class Ejercicio29a34 {
 
   /**
@@ -40,13 +42,13 @@ public class Ejercicio29a34 {
       }
     }
   }
-  
+
   /**
-   *  Devuelve la fila de un array.
+   * Devuelve la fila de un array.
    *
-   * @param array es un array bidimensional 
-   * @param x fila del array que queremos 
-   * 
+   * @param array es un array bidimensional
+   * @param x fila del array que queremos
+   *
    * @return fila array.
    */
   public static int[] filaArrayBiInt(int array[][], int x) {
@@ -59,11 +61,11 @@ public class Ejercicio29a34 {
   }
 
   /**
-   *  Devuelve la columna de un array.
+   * Devuelve la columna de un array.
    *
-   * @param array es un array bidimensional 
-   * @param x culumna del array que queremos 
-   * 
+   * @param array es un array bidimensional
+   * @param x culumna del array que queremos
+   *
    * @return columna array.
    */
   public static int[] columnaArrayBiInt(int array[][], int x) {
@@ -74,14 +76,14 @@ public class Ejercicio29a34 {
     }
     return columna;
   }
-  
+
   /**
    * Devuelve las coordenadas de un número introducido, de un array dado.
    *
-   * @param array es un array bidimensional 
+   * @param array es un array bidimensional
    * @param x número que encontrar en el array
-   * 
-   * @return coordenadas es un array con las coordenadas del número introducido 
+   *
+   * @return coordenadas es un array con las coordenadas del número introducido
    * y -1 -1 en el caso de no encontrarse en el array.
    */
   public static int[] coordenadasEnArrayBiInt(int array[][], int x) {
@@ -101,64 +103,144 @@ public class Ejercicio29a34 {
     }
     return coordenadas;
   }
-  
+
   /**
    * Devuelve si las coordenadas son o no pundo de silla.
    *
-   * @param array es un array bidimensional 
-   * @param x fila del array 
+   * @param array es un array bidimensional
+   * @param x fila del array
    * @param y columna del array
-   * 
+   *
    * @return true si es verdadero y false si es falso
    */
-  public static boolean esPuntoDeSilla(int array[][], int x,int y) {
-    
+  public static boolean esPuntoDeSilla(int array[][], int x, int y) {
+
     int[] fila = filaArrayBiInt(array, x);
-    int[] columna = columnaArrayBiInt(array, y );
-    
+    int[] columna = columnaArrayBiInt(array, y);
+
     return ((Ejercicios20a28.minimoArrayInt(fila) == array[x][y]) && (Ejercicios20a28.maximoArrayInt(columna) == array[x][y]));
   }
-  
+
   /**
    * Devuelve las coordenadas de la diagonal que le indiques.
    *
-   * @param array es un array bidimensional 
-   * @param fila fila del array 
+   * @param array es un array bidimensional
+   * @param fila fila del array
    * @param columna columna del array
    * @param direccion es el sentido de la diagonal
-   * 
+   *
    * @return diagonal
    */
-  public static int[] diagonal(int array[][],int fila,int columna,String direccion) {
+  public static int[] diagonal(int array[][], int fila, int columna, String direccion) {
     int nFilas = array[0].length - fila;
-    int nColumnas = array.length -columna;
+    int nColumnas = array.length - columna;
     int dimension;
-    if (nFilas < nColumnas){
+    if (nFilas < nColumnas) {
       dimension = nFilas;
-    } else{
+    } else {
       dimension = nColumnas;
-    } 
-    int diagonal[] = new int[dimension]; 
+    }
+    int diagonal[] = new int[dimension];
     diagonal[0] = array[fila][columna];
     int j = 1;
-    switch(direccion){
+    switch (direccion) {
       case "nose":
-        do{
+        do {
           diagonal[j++] = array[++fila][++columna];
-          
-        } while(fila < array[0].length-1 && columna < array.length-1);
+
+        } while (fila < array[0].length - 1 && columna < array.length - 1);
         break;
       case "neso":
-        do{
+        do {
           diagonal[j++] = array[++fila][--columna];
 
-        } while(columna > 0 && fila < array[0].length-1);
+        } while (columna > 0 && fila < array[0].length - 1);
         break;
       default:
     }
-    
+
     return diagonal;
   }
+
+  /**
+   * Devuelve un array con los números primos que haya en otro array dado
+   *
+   *
+   * @param x es un array dado como parametro
+   *
+   * @return primos array con números primos
+   */
+  public static int[] filtraPrimos(int x[]) {
+    int cuentaPrimos = 0;
+    for (int n : x) {
+      if (Ejercicios1a14.esPrimo(n)) {
+        cuentaPrimos++;
+      }
+    }
+    int primos[] = new int[cuentaPrimos];
+    int i = 0;
+    if (cuentaPrimos == 0) {
+      int[] aux = {-1};
+      return aux;
+    } else {
+      for (int b : x) {
+        if (Ejercicios1a14.esPrimo(b)) {
+          primos[i++] = b;
+        }
+      }
+    }
+    return primos;
+  }
   
+  /**
+   * Devuelve un array con los números capicúa que haya en otro array dado
+   *
+   *
+   * @param x es un array dado como parametro
+   *
+   * @return capicua array con números capicúa
+   */
+  public static int[] filtraCapicuas(int x[]){
+    int cuentaCapicua = 0;
+    for (int n : x) {
+      if (Ejercicios1a14.esCapicua(n)) {
+        cuentaCapicua++;
+      }
+    }
+    int capicua[] = new int[cuentaCapicua];
+    int i = 0;
+    if (cuentaCapicua == 0) {
+      int[] aux = {-1};
+      return aux;
+    } else {
+      for (int b : x) {
+        if (Ejercicios1a14.esCapicua(b)) {
+          capicua[i++] = b;
+        }
+      }
+    }
+    return capicua;
+  }
+  public static int[] filtraCon7(int x[]){
+    int cuentaSiete = 0;
+    for (int n : x) {
+      if (Ejercicios1a14.posicionDeDigito(n,7) > -1) {
+        cuentaSiete++;
+      }
+    }
+    int conSiete[] = new int[cuentaSiete];
+    int i = 0;
+    if (cuentaSiete == 0) {
+      int[] aux = {-1};
+      return aux;
+    } else {
+      for (int b : x) {
+        if (Ejercicios1a14.posicionDeDigito(b,7) > -1) {
+          conSiete[i++] = b;
+        }
+      }
+    }
+    return conSiete;
+  }
   
 }

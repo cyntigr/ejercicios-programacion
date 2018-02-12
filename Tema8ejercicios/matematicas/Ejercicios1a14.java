@@ -3,9 +3,8 @@ package tema8ejercicios.matematicas;
 public class Ejercicios1a14 {
 
   /**
-   * Comprueba si un número entero positivo es primo o no
-   * Un número es primo cuando únicamente es divisible entre él mismo 
-   * y la unidad.
+   * Comprueba si un número entero positivo es primo o no Un número es primo
+   * cuando únicamente es divisible entre él mismo y la unidad.
    *
    * @param x un número entero positivo
    * @return true si el número es primo y false en caso contrario
@@ -21,8 +20,8 @@ public class Ejercicios1a14 {
   }
 
   /**
-   * Busca el siguiente primo de un número.
-   * Sumas uno cada vez y compruebas si es primo
+   * Busca el siguiente primo de un número. Sumas uno cada vez y compruebas si
+   * es primo
    *
    * @param x número entero positivo
    * @return número primo siguiente al introducido
@@ -35,8 +34,8 @@ public class Ejercicios1a14 {
   }
 
   /**
-   * Devuelve el resultado de una potencia.
-   * Multiplica un número por si mismo tantas veces como se indica
+   * Devuelve el resultado de una potencia. Multiplica un número por si mismo
+   * tantas veces como se indica
    *
    * @param x base
    * @param y exponente
@@ -53,9 +52,9 @@ public class Ejercicios1a14 {
   }
 
   /**
-   * Voltea un número.
-   * Da la vuelta a un número Quita el último número y lo pones al principio
-   * 
+   * Voltea un número. Da la vuelta a un número Quita el último número y lo
+   * pones al principio
+   *
    * @param x número entero
    * @return número volteado
    */
@@ -69,8 +68,7 @@ public class Ejercicios1a14 {
   }
 
   /**
-   * Cuenta los dígitos de un número entero.
-   * Quita número a número y los cuenta
+   * Cuenta los dígitos de un número entero. Quita número a número y los cuenta
    *
    * @param x número entero
    * @return número de dígitos
@@ -89,8 +87,8 @@ public class Ejercicios1a14 {
   }
 
   /**
-   * Comprueba si es Capicúa.
-   * Voltea el número introducido y comprueba si es igual al introducido
+   * Comprueba si es Capicúa. Voltea el número introducido y comprueba si es
+   * igual al introducido
    *
    * @param x número entero
    * @return true si el número es capicúa y false en caso contrario
@@ -101,8 +99,8 @@ public class Ejercicios1a14 {
   }
 
   /**
-   * Devuelve un dígito n concreto.
-   * Cuenta de izquierda a derecha y saca el dígito
+   * Devuelve un dígito n concreto. Cuenta de izquierda a derecha y saca el
+   * dígito
    *
    * @param x número entero
    * @param n posición dígito
@@ -111,12 +109,12 @@ public class Ejercicios1a14 {
   public static int digitoN(long x, int n) {
 
     int numero = digitos(x) - n - 1;
-    
-    for(int i = 0;i < numero;i++){
+
+    for (int i = 0; i < numero; i++) {
       x /= 10;
     }
     x %= 10;
-    return (int)x;
+    return (int) x;
   }
 
   public static int digitoN(int x, int n) {
@@ -125,8 +123,8 @@ public class Ejercicios1a14 {
   }
 
   /**
-   * Devuelve la posición de un dígito.
-   * Cuenta de izquierda a derecha y saca el dígito
+   * Devuelve la posición de un dígito. Cuenta de izquierda a derecha y saca el
+   * dígito
    *
    * @param x número entero
    * @param n dígito del que quiero saber la posición
@@ -149,37 +147,37 @@ public class Ejercicios1a14 {
   }
 
   /**
-   * Quita un número por la parte de atrás.
-   * Dividimos por 10 tantas veces como dígitos quieras quitar
+   * Quita un número por la parte de atrás. Dividimos por 10 tantas veces como
+   * dígitos quieras quitar
    *
    * @param x número entero
    * @param y dígitos que quita
    * @return número sin los dígitos señalados
    */
   public static int quitaPorDetras(int x, int y) {
-    
-    for(int i = 0; i < y; i++){
+
+    for (int i = 0; i < y; i++) {
       x /= 10;
     }
     return x;
   }
 
   /**
-   * Quita un número por la parte de delante.
-   * Volteamos y dividimos por 10 tantas veces como dígitos quieras quitar
+   * Quita un número por la parte de delante. Volteamos y dividimos por 10
+   * tantas veces como dígitos quieras quitar
    *
    * @param x número entero
    * @param y dígitos que quita
    * @return número sin los dígitos señalados en la parte de delante
    */
   public static int quitaPorDelante(int x, int y) {
-    return voltea(quitaPorDetras(voltea(x),y));
+    return voltea(quitaPorDetras(voltea(x), y));
   }
-  
+
   /**
-   * Añade un número detras a un número entero dado
-   * Multiplicamos por 10 para aumentar el numero y poder sumar "y"
-   * 
+   * Añade un número detras a un número entero dado Multiplicamos por 10 para
+   * aumentar el numero y poder sumar "y"
+   *
    * @param x número entero
    * @param y dígito que añade
    * @return número completo
@@ -187,24 +185,23 @@ public class Ejercicios1a14 {
   public static int pegaPorDetras(int x, int y) {
     return x * 10 + y;
   }
-  
+
   /**
-   * Añade un número delante a un número entero dado
-   * Voltea el número, pegamos por detrás el número y voltea
-   * 
+   * Añade un número delante a un número entero dado Voltea el número, pegamos
+   * por detrás el número y voltea
+   *
    * @param x número entero
    * @param y dígito que añade
    * @return número completo
    */
   public static int pegaPorDelante(int x, int y) {
-    return voltea(pegaPorDetras(voltea(x),y));
+    return voltea(pegaPorDetras(voltea(x), y));
   }
-  
+
   /**
-   * Devuelve un trozo de número.
-   * Toma como parámetros las posiciones inicial y final 
-   * dentro de un número y devuelve el trozo correspondiente
-   * 
+   * Devuelve un trozo de número. Toma como parámetros las posiciones inicial y
+   * final dentro de un número y devuelve el trozo correspondiente
+   *
    * @param x número entero
    * @param y posición inicial
    * @param z posición final
@@ -212,23 +209,23 @@ public class Ejercicios1a14 {
    */
   public static int trozoDeNumero(int x, int y, int z) {
     int trozo = 0;
-    do{
-      trozo = pegaPorDetras(trozo,digitoN(x,y));
+    do {
+      trozo = pegaPorDetras(trozo, digitoN(x, y));
       y++;
-    } while(y <= z);
-    return trozo ;
+    } while (y <= z);
+    return trozo;
   }
-  
+
   /**
    * Une dos números en uno solo.
-   * 
-   * 
+   *
+   *
    * @param x número entero
    * @param y número entero
    * @return número completo
    */
   public static int juntaNumeros(int x, int y) {
-    return (potencia(10,digitos(y)) * x) + y;
-    
+    return (potencia(10, digitos(y)) * x) + y;
+
   }
 }

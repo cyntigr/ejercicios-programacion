@@ -10,6 +10,7 @@ public class Tema8Ejercicio29a34 {
 
   public static void main(String[] args) {
     int arrayBi[][] = Ejercicio29a34.generaArrayBiInt(5, 5, 10, 50);
+    int array[] = Ejercicios20a28.generaArrayInt(15, 3, 50);
     
     Ejercicio29a34.muestraArrayBiInt(arrayBi);
     
@@ -21,8 +22,10 @@ public class Tema8Ejercicio29a34 {
     Ejercicios20a28.muestraArray(Ejercicio29a34.coordenadasEnArrayBiInt(arrayBi, 18));
     Ejercicios20a28.muestraArray(Ejercicio29a34.diagonal(arrayBi,1, 1, "nose"));
     
-    
-    
+    Ejercicios20a28.muestraArray(array);
+    Ejercicios20a28.muestraArray(Ejercicio29a34.filtraPrimos(array));
+    Ejercicios20a28.muestraArray(Ejercicio29a34.filtraCapicuas(array));
+    Ejercicios20a28.muestraArray(Ejercicio29a34.filtraCon7(array));
   }
 
 }

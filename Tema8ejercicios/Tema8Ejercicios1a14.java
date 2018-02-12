@@ -21,6 +21,7 @@ public class Tema8Ejercicios1a14 {
       System.out.println(Ejercicios1a14.potencia(2,5));
       System.out.println(Ejercicios1a14.potencia(2,0));
       System.out.println(Ejercicios1a14.digitos(10011011));
+      System.out.println(Ejercicios1a14.posicionDeDigito(350,7));
       
       
       
